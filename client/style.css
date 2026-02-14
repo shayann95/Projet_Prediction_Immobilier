@@ -1,0 +1,128 @@
+/* === Style général de la page === */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* === Conteneur du formulaire === */
+form#prediction-form {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 500px;
+}
+
+/* === Titres === */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* === Champs du formulaire === */
+.sqft-field,
+.bhk-field,
+.bath-field,
+.location-field {
+    margin-bottom: 25px;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+/* Input type number */
+input[type="number"] {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: border 0.2s;
+}
+
+input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Select */
+select {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background: #fff;
+    transition: border 0.2s;
+}
+
+select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Groupes de radios */
+.radio-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 6px;
+}
+
+/* Bouton submit */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #007bff;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* Résultat */
+#result {
+    margin-top: 25px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #e9f5ff;
+    font-weight: bold;
+    font-size: 18px;
+    color: #007bff;
+    text-align: center;
+}
+
+/* === Responsive === */
+@media (max-width: 480px) {
+    .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    form#prediction-form {
+        padding: 20px;
+    }
+}

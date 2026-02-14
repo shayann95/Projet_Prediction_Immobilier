@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Prédiction Prix Immobilier</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- jQuery nécessaire pour ton app.js -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+
+<h1>Prédiction des prix immobiliers</h1>
+
+<form id="prediction-form">
+
+    <div class="sqft-field">
+        <label for="sqft">Surface (sqft)</label>
+        <input type="number" id="sqft" name="sqft" placeholder="Entrez la surface en sqft" required>
+    </div>
+
+    <div class="bhk-field">
+        <label>BHK</label>
+        <div class="radio-group">
+            <input type="radio" id="bhk1" name="bhk" value="1" required>
+            <label for="bhk1">1</label>
+
+            <input type="radio" id="bhk2" name="bhk" value="2">
+            <label for="bhk2">2</label>
+
+            <input type="radio" id="bhk3" name="bhk" value="3">
+            <label for="bhk3">3</label>
+
+            <input type="radio" id="bhk4" name="bhk" value="4">
+            <label for="bhk4">4</label>
+
+            <input type="radio" id="bhk5" name="bhk" value="5">
+            <label for="bhk5">5</label>
+        </div>
+    </div>
+
+    <div class="bath-field">
+        <label>Nombre de salles de bain</label>
+        <div class="radio-group">
+            <input type="radio" id="bath1" name="bath" value="1" required>
+            <label for="bath1">1</label>
+
+            <input type="radio" id="bath2" name="bath" value="2">
+            <label for="bath2">2</label>
+
+            <input type="radio" id="bath3" name="bath" value="3">
+            <label for="bath3">3</label>
+
+            <input type="radio" id="bath4" name="bath" value="4">
+            <label for="bath4">4</label>
+
+            <input type="radio" id="bath5" name="bath" value="5">
+            <label for="bath5">5</label>
+        </div>
+    </div>
+
+    <div class="location-field">
+        <label for="location">Location</label>
+        <!-- On met id="location" pour correspondre au JS -->
+        <select id="location" name="location" required>
+            <option value="" disabled selected></option>
+        </select>
+    </div>
+
+    <button class="submit" onclick="onClickedEstimatePrice()" type="button" >Estimer le prix</button>
+    <div id="EstimatedPrice" class="result"><h2></h2></div>
+</form>
+
+
+
+<!-- App.js -->
+<script src="script.js"></script>
+</body>
+</html>
