@@ -15,7 +15,7 @@ function onClickedEstimatePrice(){
           location: location.value
          },function(data, status) {
           console.log(data.estimated_price);
-          estPrice.innerHTML = "<h2>" + Math.floor((data.estimated_price*100000)/3) + "€<h2>";
+          estPrice.innerHTML = "<h2>" + Math.floor((data.estimated_price*100000)/300) + "€<h2>";
           console.log(status);
          });
  
